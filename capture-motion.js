@@ -8,7 +8,7 @@ var path = require('path');
 //Command-line arguments
 var args = process.argv.slice(2);
 var fullFileName = args[0];
-var key = path.basename(fullFileName);
+var fileName = path.basename(fullFileName);
 
 var bitmap = fs.readFileSync(fullFileName);
 
