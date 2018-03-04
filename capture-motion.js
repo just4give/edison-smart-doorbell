@@ -38,13 +38,13 @@ if(bitmap){
         //console.log(url)
 
         sns.publish({
-          Message: 'Motion delected '+ name+' . See the image I captured. ' + url,
+          Message: 'Motion delected. See the image I captured. ' + url,
           TopicArn: 'arn:aws:sns:us-east-1:027378352884:edisonMotionDetection'
         }, function (err, data) {
           if(err){
             console.log("error", err);
           }else{
-            console.log('success',data);
+            console.log('sent text message');
           }
 
         });
