@@ -21,7 +21,7 @@ var params = {
    fs.exists(fullFileName, function(exists) {
      if(exists) {
 
-       fs.unlink(fullFileName;
+       fs.unlink(fullFileName);
      }
      });
 
