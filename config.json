@@ -1,0 +1,6 @@
+{
+  "awsRegion":"us-east-1",
+  "s3Bucket":"edison118528",
+  "lexVoiceId":"Justin",
+  "awsFaceCollection":"edisionfacecollection"
+}
