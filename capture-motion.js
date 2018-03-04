@@ -12,25 +12,28 @@ var key = path.basename(fullFileName);
 
 var bitmap = fs.readFileSync(fullFileName);
 
+console.log('fullFileName',fullFileName);
+console.log('key', key);
+
 var params = {
   Body: bitmap,
   Bucket: config.s3Bucket,
   Key: fileName
  };
  s3.putObject(params, function(err, data) {
-   fs.exists(fullFileName, function(exists) {
-     if(exists) {
 
-       fs.unlink(fullFileName);
-     }
-     });
+  if(err){
+    console.log(err);
+  }else{
+    console.log('uploaded to s3 ', data);
+    fs.exists(fullFileName, function(exists) {
+      if(exists) {
 
-   if (err) {
-     console.log(err, err.stack);
-     cb(err);
-   }else{
-     //console.log(data);
-     cb(null,data);           // successful response
-   }
+        fs.unlink(fullFileName);
+      }
+      });
+  }
+
+
 
  });
