@@ -13,7 +13,7 @@ var fileName = path.basename(fullFileName);
 var bitmap = fs.readFileSync(fullFileName);
 
 console.log('fullFileName',fullFileName);
-console.log('key', key);
+console.log('fileName', fileName);
 
 var params = {
   Body: bitmap,
