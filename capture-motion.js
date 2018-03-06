@@ -32,7 +32,7 @@ if(bitmap){
       const url = s3.getSignedUrl('getObject', {
             Bucket: config.s3Bucket,
             Key: fileName,
-            Expires: 300
+            Expires: 60*60*24
         })
 
         //console.log(url)
